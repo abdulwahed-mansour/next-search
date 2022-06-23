@@ -28,7 +28,7 @@ const Backend = () => {
                     arr.push(`page=${filters.page}`);
                 }
 
-                const response = await fetch(`http://localhost:8000/api/products/backend?${arr.join('&')}`);
+                const response = await fetch(`/api/products/backend?${arr.join('&')}`);
 
                 const content = await response.json();
 

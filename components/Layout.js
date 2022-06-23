@@ -15,6 +15,14 @@ const Layout = (props) => {
                       crossOrigin="anonymous"/>
             </Head>
 
+            <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-text">
+                Navbar text with an inline element
+                </span>
+            </div>
+            </nav>
+
             <div className="container">
                 <header className="d-flex justify-content-center py-3">
                     <ul className="nav nav-pills">

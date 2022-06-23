@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from "../components/Layout";
 import Products from "../components/Products";
 
@@ -16,7 +16,7 @@ const Frontend = () => {
     useEffect(() => {
         (
             async () => {
-                const response = await fetch('http://localhost:8000/api/products/frontend');
+                const response = await fetch('/api/products/frontend');
 
                 const content = await response.json();
 
@@ -25,6 +25,7 @@ const Frontend = () => {
                 setLastPage(Math.ceil(content.length / perPage));
             }
         )()
+        
     }, []);
 
     useEffect(() => {
@@ -49,7 +50,7 @@ const Frontend = () => {
 
     return (
         <Layout>
-            <Products products={filteredProducts} filters={filters} setFilters={setFilters} lastPage={lastPage}/>
+            <Products products={filteredProducts} filters={filters} setFilters={setFilters} lastPage={lastPage} />
         </Layout>
     );
 };
