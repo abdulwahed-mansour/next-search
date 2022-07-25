@@ -39,16 +39,9 @@ const Products = (props) => {
   return (
     <>
       <div className="col-md-12 mb-4 input-group">
-        <input
-          className="form-control"
-          placeholder="Search"
-          onKeyUp={(e) => search(e.target.value)}
-        />
+        <input className="form-control" placeholder="Search" onKeyUp={(e) => search(e.target.value)} />
         <div className="input-group-append">
-          <select
-            className="form-select"
-            onChange={(e) => sort(e.target.value)}
-          >
+          <select className="form-select" onChange={(e) => sort(e.target.value)}>
             <option>Select</option>
             <option value="asc">Price Ascending</option>
             <option value="desc">Price Descending</option>
